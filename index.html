@@ -1,660 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Akhil kumar Kolli Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<head>
+  <title>Akhil Kumar Kolli | Data Engineer Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Akhil Kumar Kolli - Data Engineer specializing in AWS, Databricks, PySpark, SQL, Airflow, Snowflake, and scalable cloud data platforms.">
+  <meta name="keywords" content="Data Engineer, AWS, PySpark, SQL, Databricks, Airflow, Snowflake, ETL, Data Engineering Portfolio">
+  <meta name="author" content="Akhil Kumar Kolli">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+  <style>
+    :root {
+      --accent: #ffbd39;
+      --dark: #111111;
+      --muted: #999999;
+    }
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    html { scroll-behavior: smooth; }
 
+    .navbar-brand { text-transform: none; font-weight: 700; }
 
+    .hero-wrap {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at top right, rgba(255,189,57,.18), transparent 30%), #000;
+      color: #fff;
+    }
 
-<style>
+    .hero-wrap h1 { font-size: 60px; font-weight: 800; line-height: 1.1; }
+    .hero-wrap h1 span, .text-accent { color: var(--accent); }
+    .hero-subtitle { font-size: 22px; color: #d7d7d7; max-width: 760px; }
 
-/*======================================
- //--//-->   ABOUT
-======================================*/
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0; }
+    .hero-badges span {
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px;
+      padding: 8px 14px;
+      color: #eee;
+      background: rgba(255,255,255,.05);
+    }
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+    .btn-outline-accent {
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+    }
+    .btn-outline-accent:hover { background: var(--accent); color: #000; }
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+    .section-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px;
+      padding: 26px;
+      height: 100%;
+      transition: transform .25s ease, border-color .25s ease;
+    }
+    .section-card:hover { transform: translateY(-6px); border-color: rgba(255,189,57,.45); }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
+    .skill-pill {
+      display: inline-block;
+      padding: 8px 12px;
+      margin: 5px;
+      border-radius: 999px;
+      background: rgba(255,189,57,.12);
+      color: #f2f2f2;
+      border: 1px solid rgba(255,189,57,.22);
+      font-size: 14px;
+    }
 
+    .resume-wrap .date { color: var(--accent); font-weight: 700; }
+    .resume-wrap ul { padding-left: 20px; }
+    .resume-wrap li { margin-bottom: 10px; }
 
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
+    .project-card .block-20 {
+      border-radius: 12px;
+      overflow: hidden;
+      min-height: 210px;
+      background-size: cover;
+      background-position: center;
+    }
+    .project-card h3 a { color: #fff; }
+    .project-card p { min-height: 72px; }
+    .project-tags span {
+      display: inline-block;
+      font-size: 12px;
+      color: #111;
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 5px 9px;
+      margin: 4px 3px 0 0;
+      font-weight: 600;
+    }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
+    .zoom-effect { transition: transform .3s ease; }
+    .zoom-effect:hover { transform: scale(1.04); }
 
+    .contact-section a { word-break: break-word; }
 
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
+    @media (max-width: 767px) {
+      .hero-wrap { min-height: auto; padding: 120px 0 70px; }
+      .hero-wrap h1 { font-size: 38px; }
+      .hero-subtitle { font-size: 18px; }
+    }
+  </style>
+</head>
 
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#home-section">Akhil Kumar Kolli</a>
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav nav ml-auto">
+          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
+          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-
-</style>
-
-
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Akhil Kumar kolli</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-<!-- 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li> -->
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-		  <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-<!-- 	  <section id="home-section" class="hero">
-<!-- 		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div> -->
-<!-- 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Akhil kumar kolli</span></h1>
-<!-- 
-						<!-- Element to contain animated typing -->
-<!-- 						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation'); -->
-
-<!-- 						// // Create an array of typing text
-						// const typingTexts = [
-						// 'Engineer  '
-						]; -->
-
-<!-- 						// Create a function to display the typing animation for a given text
-						// function playTypingAnimation(text) {
-						// // Loop through each character and add it to the element
-						// for (let i = 0; i < text.length; i++) {
-						// 	setTimeout(() => {
-						// 	typingAnimationElement.textContent += text[i];
-						// 	}, i * 200); // Increase the delay to slow down the typing animation
-						// }
-
-						// // Once the animation is complete, reset the text and start over
-						// setTimeout(() => {
-						// 	typingAnimationElement.textContent = '';
-						// 	playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						// }, text.length * 200);
-						// }
- -->
-<!-- 						// // Start the typing animation loop
-						// playTypingAnimation(typingTexts[0]);
-
-						// </script>
-
-						// <br>
-						// <br>
-			   //          <h2>Data Engineer</h2> --> 
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <!-- <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a>  -->
-<!-- 							<a href="https://github.com/Akhilkumarkolli" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p> -->
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Akhil Kumar Kolli</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Data Engineer</span></p>
-										<p><span class="title-s">Experience: </span> <span>8+ Years </span></p>
-										<p><span class="title-s">Address: </span> <span>West Haven, United States</span></p>
-									  </div>
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>SQL</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>PYTHON</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Cloud Technologies</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Visualizations</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Big Data Technologies</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>With 8+ years in IT and 7 years as a Data Engineer, I excel in crafting scalable data solutions using AWS, SQL, and Python, driving efficiency and impactful results.
-									</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Engineering  &amp; Analytics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Retail, ECommerce. </span></li>
-									<li class="d-flex"><span>Education:</span> <span>M.SC in Business Analytics</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Qilk &amp; Tableau</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>AWS, PySpark, SQL, Git, JIRA, Data Modeling &amp; Azure</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Playing games</span></li>
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="9">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/akhil-kumar-020690193/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p><p>With 8+ years of experience as a Data Engineer & ETL Developer, I specialize in building advanced data-driven solutions using AWS technologies, SQL, and Python. I have a proven track record of designing and optimizing scalable data architectures, enhancing data processes, and driving impactful business outcomes.</p></p>
+  <section id="home-section" class="hero-wrap">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-10 ftco-animate">
+          <span class="subheading text-accent">Hello, I’m</span>
+          <h1 class="mb-4">Akhil Kumar Kolli</h1>
+          <p class="hero-subtitle mb-4">Data Engineer specializing in cloud data platforms, scalable ETL/ELT pipelines, PySpark processing, Airflow orchestration, and analytics-ready data models.</p>
+          <div class="hero-badges">
+            <span>AWS</span><span>Databricks</span><span>PySpark</span><span>SQL</span><span>Airflow</span><span>Snowflake</span><span>Data Modeling</span>
           </div>
+          <p>
+            <a href="#project-section" class="btn btn-primary py-3 px-4">View Projects</a>
+            <a href="https://github.com/Akhilkumarkolli" target="_blank" rel="noopener" class="btn btn-outline-accent py-3 px-4 ml-2">GitHub</a>
+            <a href="https://www.linkedin.com/in/akhil-kumar-020690193/" target="_blank" rel="noopener" class="btn btn-white btn-outline-white py-3 px-4 ml-2">LinkedIn</a>
+          </p>
         </div>
+      </div>
+    </div>
+  </section>
 
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">Aetna INC</span>
-						<h2>Consultant Data Engineer </h2>
-						<span class="position">2024-Present</span>
-						<span class="mt4"Texas </span>
-						<!-- <p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International.  -->
-							<ul>
-								<li>Expert in AWS services, including Glue, Redshift, S3, Lambda, and Lake Formation, for designing scalable workflows and cost-optimized solutions.</li>
-								<li>Streamlined PySpark transformations on Amazon EMR and processed delta tables in S3, enabling seamless data analytics in Redshift.</li>
-								<li>Automated DMS ingestion with AWS Step Functions, ensuring reliable SQL-to-S3 data replication workflows.</li>
-							</ul>
-						</p>
-					</div>
-
-				</div>
-		
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">Amazon</span>
-						<h2>Data Engineer </h2>
-						<span class="position">2021-2023</span>
-						<span class="mt4">Hyderabad</span>
-						<!-- <p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International.  -->
-							<ul>
-								<li>Built and optimized ETL pipelines using AWS services like Glue and Lambda.</li>
-								<li>Managed a data lake on S3 and performed real-time data ingestion.</li>
-								<li>Leveraged Redshift Spectrum for change data capture and incremental data processing.</li>
-							</ul>
-						</p>
-					</div>
-
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">Zen3 InfoSolutions</span>
-						<h2> ETL Developer </h2>
-						<span class="position">2019-2021</span>
-						<span class="mt4">Hyderabad</span>
-						<!-- <p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands.  -->
-							<ul>
-								<li>Developed and optimized ETL pipelines using Azure Data Factory and PySpark.</li>
-								<li>Performed data transformation and processing in Azure Data Lake.</li>
-								<li>Created advanced visualizations using Power BI.</li>
-							</ul>
-						</p>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-							<span class="date">Cognizant</span>
-							<h2>System Analyst </h2>
-							<span class="position">2018-2019</span>
-							<span class="mt4">Hyderabad</span>
-							<!-- <p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International.  -->
-								<ul>
-									<li>Developed and refined ETL processes to integrate and transform data from various sources into the data warehouse, ensuring accurate
-										and timely availability for critical reporting and business analysis.</li>
-									<li>Automated data validation and integrity checks through stored procedures and functions, ensuring high-quality data and reliable
-										reporting for UBS key banking operations.</li>
-								</ul>
-							</p>
-						</div>
-	
-					</div>
-			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2023-2024</span>
-    					<h2>M.SC Business Analytics</h2>
-    					<span class="position">University of New Haven</span>
-    					<p class="mt-4">Grade: 3.8</p>
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2015-2018</span>
-    					<h2>Bachelor of Engineering</h2>
-    					<span class="position">Malla Reddy College Of Engineering </span>
-    					<p class="mt-4">Grade: First class </p>
-    				</div>
-				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<!-- <p><a href="#" class="btn btn-primary py-4 px-5">resume</a></p> -->
-    			</div>
-    		</div>
-    	</div>
-    </section>
-       
-    
-    <section id="Certifications">
-    <h2>Certifications</h2>
-    <ul>
-        <li>AWS Certified Data Engineer, Amazon Web Services (August 2024)</li>
-        <li>AWS Certified Developer, Amazon Web Services (April 2024)</li>
-	<li>AWS Cloud Practitioner, Amazon Web Services (April 2024)</li>
-	<!-- Add more certifications as needed -->
-    </ul>
-</section>
-
-
-	  
-    <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are my Data Analytics/Engineering projects on SQL, Python, PySpark, AWS.</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="IPL_data_Analysis">
-              <a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/IPL_data_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/IPL_data_Analysis.ipynb"></a>IPL Analytics: Uncovering Insights with Python and Pandas</h3>
-                <p>Performed exploratory Data Analysis using python in Pandas Data frame extracted valuable insights.</p>
+  <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <div class="container">
+      <div class="row d-flex align-items-stretch">
+        <div class="col-md-6 col-lg-5 d-flex">
+          <div class="img-about img d-flex align-items-stretch">
+            <div class="overlay">
+              <div class="row">
+                <div class="col-sm-6 col-md-5">
+                  <div class="about-img">
+                    <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="Akhil Kumar Kolli profile image">
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-7">
+                  <div class="about-info">
+                    <p><span class="title-s">Name: </span> <span>Akhil Kumar Kolli</span></p>
+                    <p><span class="title-s">Role: </span> <span>Data Engineer</span></p>
+                    <p><span class="title-s">Location: </span> <span>Connecticut, United States</span></p>
+                    <p><span class="title-s">Focus: </span> <span>Cloud Data Engineering</span></p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/LA%20Crimes.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/LA%20Crimes.ipynb">CitySafe: LA Crime Data Exploration</a></h3>
-                <p>Performed exploratory data analysis on LA_crimes data using Python.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/Time_series_project(S%26P%20500).ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/Time_series_project(S%26P%20500).ipynb">S&P 500 Time Series Insights</a></h3>
-                <p>Performed time series analysis on S&p global companies and mainly focusing on top 5 performers and there stock price analysis over past few years.</p>
+              <div class="skill-mf mt-4">
+                <p class="title-s">Core Strengths</p>
+                <span>SQL & Data Modeling</span> <span class="pull-right">95%</span>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width:95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div>
+                <span>Python & PySpark</span> <span class="pull-right">90%</span>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width:90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div>
+                <span>AWS Data Services</span> <span class="pull-right">90%</span>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width:90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div>
+                <span>Airflow Orchestration</span> <span class="pull-right">85%</span>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width:85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
               </div>
             </div>
           </div>
         </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/Youtube.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/Youtube.ipynb">Video Trends: YouTube Analytics</a></h3>
-				  <p>Performed exploratory data analysis on Youtube Dataset and found out some interesting insights from the data</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/21246543865309/2089027996029455/7293305378354005/latest.html" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/21246543865309/2089027996029455/7293305378354005/latest.html">Databricks IPL Insights: PySpark Analytics</a></h3>
-				  <p>Used data bricks to write transformations logics in PySpark and later on the top of it using SQL in order to retrieve data as per business logic and built some visuals using different libraries </p>
-				</div>
-			  </div>
-			</div>
-		 </div>
-	  </div>
-    </section>
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <!-- <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <!-- <strong class="number" data-number="20">0</strong>
-                <span>Achievements</span> -->
-              </div>
-	</div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="9">0</strong>
-                <span>Projects</span>
-              </div>
+        <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+          <div class="row justify-content-start pb-3">
+            <div class="col-md-12 heading-section ftco-animate">
+              <h1 class="big">About</h1>
+              <h2 class="mb-4">About Me</h2>
+              <p>I build reliable, scalable, and business-focused data platforms across cloud and lakehouse environments. My work includes batch and streaming ingestion, PySpark transformations, orchestration with Airflow, warehouse optimization, and data quality checks that help teams trust and use their data faster.</p>
+              <ul class="about-info mt-4 px-md-0 px-2">
+                <li class="d-flex"><span>Profile:</span> <span>Data Engineering, Analytics Engineering & Cloud ETL</span></li>
+                <li class="d-flex"><span>Cloud:</span> <span>AWS, Azure, Databricks, Snowflake</span></li>
+                <li class="d-flex"><span>Tools:</span> <span>Airflow, Glue, EMR, Redshift, DBT, Power BI, Tableau</span></li>
+                <li class="d-flex"><span>Languages:</span> <span>Python, SQL, PySpark</span></li>
+                <li class="d-flex"><span>Education:</span> <span>M.S. Business Analytics, University of New Haven</span></li>
+                <li class="d-flex"><span>Interests:</span> <span>Solving data problems, automation, cloud architecture, analytics</span></li>
+              </ul>
             </div>
           </div>
-          <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <!-- <strong class="number" data-number="1000">0</strong>
-                <span>Mentored Students</span> -->
-              <!-- </div>
-            </div>
-          </div> -->
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <!-- <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span> -->
-              </div>
+          <div class="counter-wrap ftco-animate d-flex mt-md-3">
+            <div class="text">
+              <p class="mb-4"><span class="number" data-number="9">0</span><span>+</span><span>&nbsp; Projects completed</span></p>
+              <p><a href="https://www.linkedin.com/in/akhil-kumar-020690193/" target="_blank" rel="noopener" class="btn btn-primary py-3 px-3">Connect on LinkedIn</a></p>
             </div>
           </div>
         </div>
-      </div> 
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/Akhilkumarkolli" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+      </div>
+    </div>
+  </section>
 
-
-
-   <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
+  <section class="ftco-section" id="skills-section">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-md-10 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Skills</h1>
+          <h2 class="mb-4">Technical Skills</h2>
+          <p>Hands-on skills across data ingestion, transformation, orchestration, storage, governance, and reporting.</p>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4"><div class="section-card"><h4>Cloud & Storage</h4><span class="skill-pill">AWS S3</span><span class="skill-pill">Glue</span><span class="skill-pill">EMR</span><span class="skill-pill">Lambda</span><span class="skill-pill">Redshift</span><span class="skill-pill">Azure Data Lake</span><span class="skill-pill">Snowflake</span></div></div>
+        <div class="col-md-4 mb-4"><div class="section-card"><h4>Data Processing</h4><span class="skill-pill">Python</span><span class="skill-pill">SQL</span><span class="skill-pill">PySpark</span><span class="skill-pill">Databricks</span><span class="skill-pill">Delta Lake</span><span class="skill-pill">Pandas</span><span class="skill-pill">DBT</span></div></div>
+        <div class="col-md-4 mb-4"><div class="section-card"><h4>Orchestration & Quality</h4><span class="skill-pill">Apache Airflow</span><span class="skill-pill">Control-M</span><span class="skill-pill">Step Functions</span><span class="skill-pill">Data Validation</span><span class="skill-pill">CDC</span><span class="skill-pill">CI/CD</span><span class="skill-pill">Git</span></div></div>
+      </div>
+    </div>
+  </section>
 
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>West Haven, United States</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+1 (203) 584-0488</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">akhilkumarkolli.97@gmail.com</a></p>
-	          </div>
-          </div>
-          <!-- <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="#"></a></p>
-	          </div>
-          </div> -->
+  <section class="ftco-section ftco-no-pb" id="resume-section">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-md-10 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Experience</h1>
+          <h2 class="mb-4">Professional Experience</h2>
+          <p>Experience building enterprise-grade pipelines, cloud data platforms, and analytics solutions using modern data engineering tools.</p>
+        </div>
+      </div>
 
-		  <!-- <div class="container">
-			<br>
-			<br>
-<!-- 			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div> -->
-				<!-- <br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
-<!-- 					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/akhil-kolli-020690193/"><span class="icon-linkedin"></span></a></li>  
-					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li> -->
-					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li> -->
-				      <!-- <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li> -->
-<!-- 					</ul>
-				<br>
-		   </div>
-   </div>
- </section> --> 
+      <div class="row">
+        <div class="col-md-6"><div class="resume-wrap ftco-animate"><span class="date">2024 - Present</span><h2>Consultant Data Engineer</h2><span class="position">Aetna Inc.</span><p class="mt-4"><ul><li>Designed AWS-based data workflows using Glue, EMR, S3, Lambda, Redshift, and Lake Formation to support scalable analytics and reporting.</li><li>Built PySpark transformations and Delta-style processing patterns for high-volume datasets, improving reliability and downstream consumption.</li><li>Automated ingestion and orchestration using Airflow, AWS DMS, and Step Functions with validation checks and failure monitoring.</li></ul></p></div></div>
+        <div class="col-md-6"><div class="resume-wrap ftco-animate"><span class="date">2021 - 2023</span><h2>Data Engineer</h2><span class="position">Amazon</span><p class="mt-4"><ul><li>Developed ETL pipelines using AWS Glue, Lambda, S3, and Redshift to support large-scale reporting and analytics use cases.</li><li>Implemented incremental processing and CDC patterns to reduce processing time and improve data freshness.</li><li>Optimized SQL and warehouse queries using partitioning, file layout improvements, and Redshift Spectrum best practices.</li></ul></p></div></div>
+        <div class="col-md-6"><div class="resume-wrap ftco-animate"><span class="date">2019 - 2021</span><h2>ETL Developer</h2><span class="position">Zen3 InfoSolutions</span><p class="mt-4"><ul><li>Built ETL workflows using Azure Data Factory, PySpark, SQL, and Azure Data Lake for analytics and reporting datasets.</li><li>Created transformation logic and validation checks to improve data quality and reduce manual reconciliation effort.</li><li>Developed Power BI dashboards and semantic datasets for business stakeholders.</li></ul></p></div></div>
+        <div class="col-md-6"><div class="resume-wrap ftco-animate"><span class="date">2018 - 2019</span><h2>System Analyst</h2><span class="position">Cognizant</span><p class="mt-4"><ul><li>Supported ETL development, SQL optimization, and stored procedure automation for banking and enterprise reporting workflows.</li><li>Improved data validation and integrity checks to support accurate business reporting and operational analytics.</li></ul></p></div></div>
+      </div>
 
+      <div class="row mt-5">
+        <div class="col-md-6"><div class="resume-wrap ftco-animate"><span class="date">2023 - 2024</span><h2>M.S. Business Analytics</h2><span class="position">University of New Haven</span><p class="mt-4">GPA: 3.8</p></div></div>
+        <div class="col-md-6"><div class="resume-wrap ftco-animate"><span class="date">2015 - 2018</span><h2>Bachelor of Engineering</h2><span class="position">Malla Reddy College of Engineering</span><p class="mt-4">Grade: First Class</p></div></div>
+      </div>
+    </div>
+  </section>
 
- 
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+  <section class="ftco-section" id="certifications-section">
+    <div class="container">
+      <div class="row justify-content-center pb-4"><div class="col-md-8 heading-section text-center ftco-animate"><h1 class="big big-2">Certifications</h1><h2 class="mb-4">Certifications</h2></div></div>
+      <div class="row">
+        <div class="col-md-4 mb-4"><div class="section-card"><h4>AWS Certified Data Engineer</h4><p>Amazon Web Services, August 2024</p></div></div>
+        <div class="col-md-4 mb-4"><div class="section-card"><h4>AWS Certified Developer</h4><p>Amazon Web Services, April 2024</p></div></div>
+        <div class="col-md-4 mb-4"><div class="section-card"><h4>AWS Cloud Practitioner</h4><p>Amazon Web Services, April 2024</p></div></div>
+      </div>
+    </div>
+  </section>
 
+  <section class="ftco-section" id="project-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-8 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Projects</h1>
+          <h2 class="mb-4">Featured Projects</h2>
+          <p>Selected analytics and data engineering projects using Python, SQL, PySpark, Databricks, and cloud technologies.</p>
+        </div>
+      </div>
+      <div class="row d-flex">
+        <div class="col-md-4 d-flex ftco-animate mb-4"><div class="blog-entry project-card"><a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/IPL_data_Analysis.ipynb" target="_blank" rel="noopener" class="block-20 zoom-effect" style="background-image:url('images/proj_1.jpg');"></a><div class="text mt-3 d-block"><h3 class="heading"><a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/IPL_data_Analysis.ipynb" target="_blank" rel="noopener">IPL Analytics with Python</a></h3><p>Exploratory data analysis using Pandas to uncover player, team, and match-performance insights.</p><div class="project-tags"><span>Python</span><span>Pandas</span><span>EDA</span></div></div></div></div>
+        <div class="col-md-4 d-flex ftco-animate mb-4"><div class="blog-entry project-card"><a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/LA%20Crimes.ipynb" target="_blank" rel="noopener" class="block-20 zoom-effect" style="background-image:url('images/proj_2.jpg');"></a><div class="text mt-3 d-block"><h3 class="heading"><a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/LA%20Crimes.ipynb" target="_blank" rel="noopener">CitySafe: LA Crime Analysis</a></h3><p>Analyzed crime trends, locations, and patterns to identify meaningful public-safety insights.</p><div class="project-tags"><span>Python</span><span>Visualization</span><span>Analytics</span></div></div></div></div>
+        <div class="col-md-4 d-flex ftco-animate mb-4"><div class="blog-entry project-card"><a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/Time_series_project(S%26P%20500).ipynb" target="_blank" rel="noopener" class="block-20 zoom-effect" style="background-image:url('images/proj_3.jpg');"></a><div class="text mt-3 d-block"><h3 class="heading"><a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/Time_series_project(S%26P%20500).ipynb" target="_blank" rel="noopener">S&P 500 Time Series Insights</a></h3><p>Performed time-series analysis to compare top-performing companies and stock-price movement patterns.</p><div class="project-tags"><span>Time Series</span><span>Python</span><span>Finance</span></div></div></div></div>
+        <div class="col-md-4 d-flex ftco-animate mb-4"><div class="blog-entry project-card"><a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/Youtube.ipynb" target="_blank" rel="noopener" class="block-20 zoom-effect" style="background-image:url('images/proj_4.jpg');"></a><div class="text mt-3 d-block"><h3 class="heading"><a href="https://github.com/Akhilkumarkolli/Data_Analysis_Projects/blob/main/Youtube.ipynb" target="_blank" rel="noopener">YouTube Trend Analytics</a></h3><p>Explored video category, engagement, and trend behavior to identify content-performance drivers.</p><div class="project-tags"><span>EDA</span><span>Python</span><span>Insights</span></div></div></div></div>
+        <div class="col-md-4 d-flex ftco-animate mb-4"><div class="blog-entry project-card"><a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/21246543865309/2089027996029455/7293305378354005/latest.html" target="_blank" rel="noopener" class="block-20 zoom-effect" style="background-image:url('images/proj_5.jpg');"></a><div class="text mt-3 d-block"><h3 class="heading"><a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/21246543865309/2089027996029455/7293305378354005/latest.html" target="_blank" rel="noopener">Databricks IPL PySpark Analytics</a></h3><p>Built PySpark transformations and SQL analytics in Databricks with visual outputs for business-friendly insights.</p><div class="project-tags"><span>Databricks</span><span>PySpark</span><span>SQL</span></div></div></div></div>
+        <div class="col-md-4 d-flex ftco-animate mb-4"><div class="blog-entry project-card"><a href="https://github.com/Akhilkumarkolli" target="_blank" rel="noopener" class="block-20 zoom-effect" style="background-image:url('images/bg_1.jpg');"></a><div class="text mt-3 d-block"><h3 class="heading"><a href="https://github.com/Akhilkumarkolli" target="_blank" rel="noopener">More Data Engineering Work</a></h3><p>Additional notebooks, portfolio code, and data projects are available on GitHub.</p><div class="project-tags"><span>GitHub</span><span>Portfolio</span><span>Projects</span></div></div></div></div>
+      </div>
+    </div>
+  </section>
 
-  <!-- loader -->
+  <section class="ftco-section ftco-hireme img" style="background-image:url(images/bg_1.jpg)">
+    <div class="container"><div class="row justify-content-center"><div class="col-md-8 ftco-animate text-center"><h2>Open to Data Engineering opportunities</h2><p class="mt-3">I enjoy building automated pipelines, clean data models, and analytics platforms that solve real business problems.</p><p><a href="mailto:akhilkumarkolli.97@gmail.com" class="btn btn-primary py-3 px-5">Contact Me</a></p></div></div></div>
+  </section>
+
+  <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3"><div class="col-md-7 heading-section text-center ftco-animate"><h1 class="big big-2">Contact</h1><h2 class="mb-4">Contact Me</h2><p>Below are the details to reach out to me.</p></div></div>
+      <div class="row d-flex contact-info mb-5">
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate"><div class="align-self-stretch box p-4 text-center"><div class="icon d-flex align-items-center justify-content-center"><span class="icon-map-signs"></span></div><h3 class="mb-4">Location</h3><p>Connecticut, United States</p></div></div>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate"><div class="align-self-stretch box p-4 text-center"><div class="icon d-flex align-items-center justify-content-center"><span class="icon-phone2"></span></div><h3 class="mb-4">Phone</h3><p><a href="tel:+12035840488">+1 (203) 584-0488</a></p></div></div>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate"><div class="align-self-stretch box p-4 text-center"><div class="icon d-flex align-items-center justify-content-center"><span class="icon-paper-plane"></span></div><h3 class="mb-4">Email</h3><p><a href="mailto:akhilkumarkolli.97@gmail.com">akhilkumarkolli.97@gmail.com</a></p></div></div>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate"><div class="align-self-stretch box p-4 text-center"><div class="icon d-flex align-items-center justify-content-center"><span class="icon-globe"></span></div><h3 class="mb-4">Profiles</h3><p><a href="https://github.com/Akhilkumarkolli" target="_blank" rel="noopener">GitHub</a> | <a href="https://www.linkedin.com/in/akhil-kumar-020690193/" target="_blank" rel="noopener">LinkedIn</a></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ftco-footer ftco-section">
+    <div class="container"><div class="row"><div class="col-md-12 text-center"><p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Built by Akhil Kumar Kolli</p></div></div></div>
+  </footer>
+
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -668,8 +326,6 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  
   <script src="js/main.js"></script>
-    
-  </body>
+</body>
 </html>
